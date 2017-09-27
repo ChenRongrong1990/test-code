@@ -1,0 +1,26 @@
+parking  
+Skip to end of metadata
+Created by Jing Q XU, last modified on Aug 01, 2017 Go to start of metadata
+Attention: construct data from console is not required, do not implement that logic. Never write code use fgets scanf, getchr, cin or other functions to get input from console.
+If you do need data for test, just set the value of variables.
+Implement a parking management system:
+Parking lot has several floors. Each floor has different number of parking space.
+To implement parking functions: according to the strategy, guide the user to park to the designated floor.
+Support the two different strategies:
+Strategy 1: guide the user to the floor which has the most empty parking space.
+Strategy 2: guide the user to the floor which has the most empty parking space until this floor is full.
+Implement query functionality including
+query the total parking space of each floor
+query the empty parking space of each floor
+query one car's location according to its license plate number
+ 
+Implement pick-up functionality
+
+实现一个停车场管理系统：
+停车场有多个楼层，每个楼层的车位数不同
+实现停车功能，根据策略，引导用户停放到指定楼层。支持两种策略： 
+存放到剩余车位最多的停车场
+存放到空置率最高的停车场
+实现查询功能，能查询每个停车场的车位数、空位数
+根据车牌号，查询汽车停放的车位
+实现取车功能

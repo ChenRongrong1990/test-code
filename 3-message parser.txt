@@ -1,0 +1,78 @@
+message parser  
+Skip to end of metadata
+Created by Jing Q XU, last modified on Aug 01, 2017 Go to start of metadata
+Attention: construct data from console is not required, do not implement that logic. Never write code use fgets scanf, getchr, cin or other functions to get input from console.
+If you do need data for test, just set the value of variables.
+Requirement Description：
+According to the specified message format and message file, to parse the message。
+File contains more rows and each row has the same format.
+Each row is a record.
+Record is composed of multiple fields, use '&' space between fields
+The value of each field can be 
+basic type as int, short, const char*,double,float
+or array with basic type，for example，array:int:3
+For clean code、UT certification, no requirement to support other data type except basic type，For evolutionary design cerfication，self-defined data type need to be supported.
+One data file example, in which data type is "int,const char*"
+1&abc
+2&abc
+3&hgi
+Strict matching fields content
+for non-string type, any space before or after the content will fail the parsing.
+for string type，space is part of content 
+
+ Message parsing examples：
+Message format is "int,const char*"，message conent is "2&abc"，parsing succeed and the result is 2,“abc"
+Message format is "int,int"
+Message content is ”1"，parsing failed
+Message content is "1&\2&3"，parsing failed
+Message content is "1&w"，parsing failed
+Message content is "1&2"，parsing succeed and the result is 1,2
+Message format is "array:int:3"
+Message content is "3:1,2"，parsing failed
+Message content is "3:1,w,2,z"，parsing failed
+Message content is "3:1,2,2"，parsing succeed
+Message format is "array:int:3,const char*"
+Message content is "3:1,2,3&hello"，parsing succeed
+Message content is "3:1,2,3&hello&5"，parsing failed
+Message content is "3:1,2,3"，parsing failed
+LikeBe the first to like this
+No labels Edit Labels
+1 Comment
+ User icon: jqxu
+Jing Q XU
+需求描述：
+根据指定的报文格式和报文文件，解析报文。
+文件里包含多行记录，每一行格式相同。
+每一行是一条记录
+记录由多个字段组成，字段间用'&'分隔
+每个字段的值可能是 
+基础类型int, short, const char*,double,float
+或者是基础类型的数组，如，array:int:3
+对于clean code、UT的认证不需要支持其他数据类型，对于Advanced C++、evolutionary design的认证，需要支持用户自定义类型
+数据文件例子，数据格式是"int,const char*"
+ 
+1&abc
+2&abc
+3&hgi
+字段内容严格匹配
+非字符串类型，内容前、后出现空格，应解析失败
+对于字符串类型，空格是内容的一部分 
+ 数据解析例子：
+报文定义"int,const char*"，数据"2&abc"，解析结果是2,“abc"
+报文定义"int,int"
+数据”1"，解析失败
+数据"1&\2&3"，解析失败
+数据"1&w"，解析失败
+数据"1&2"，解析成功，结果是1,2
+报文定义"array:int:3"
+数据"3:1,2"，解析失败
+数据"3:1,w,2,z"，解析失败
+数据"3:1,2,2"，解析成功
+报文定义"array:int:3,const char*"
+数据"3:1,2,3&hello"，解析成功
+数据"3:1,2,3&hello&5"，解析失败
+数据"3:1,2,3"，解析失败
+自定义格式
+struct Point {int i; int j} ;
+报文定义"Point,int"
+数据“1,2&5"，解析成功，Point的x是1，y是2。int值是5

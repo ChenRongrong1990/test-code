@@ -1,0 +1,41 @@
+Student Information Management system  
+Skip to end of metadata
+Created by Jing Q XU, last modified on Aug 01, 2017 Go to start of metadata
+Attention: construct data from console is not required, do not implement that logic. Never write code use fgets scanf, getchr, cin or other functions to get input from console.
+If you do need data for test, just set the value of variables.
+Record the basic information of the students including: student ID, gender, age, class, interest groups,  each subject performance, home address, parents email address
+Basic Requirement:
+Subject performance only include three subjects: Engligh, Math, History.
+Student record can be added, modified and deleted.
+Query one student's information based on student ID
+Generate each student's subject performance report and send it to the related parents' email address.(sending email functionality is just a stub. No need to implement it)
+Query all students in one class
+Extended Requirement：
+Query all student in one interest group
+Query one student's all interest groups
+According to different class, student's subject performance report may have different subjects. Some class has English, Math,History subjects. Some may have physics, chemistry.
+The mail style can be customized.
+Can send mail to all students' parent email address who are in one interest group. (sending email functionality is just a stub. No need to implement it)
+ 
+Note：
+For clean code and UT certification，basic requirement is demanded.
+For evolutionary design certification, both basic and extended requirement are demanded.
+
+记录学生的基本信息，学生基本信息包括：学号、性别、年龄、班级、参加的兴趣小组、各学科学习成绩、家庭地址、监护人邮件地址。
+基本需求：
+学生的学科成绩只包含语数外
+提供学生信息的录入、修改、删除功能
+按学号查询学生的基本信息
+生成每个学生的学习成绩报告单，邮件发送监护人
+邮件发送功能打桩，无需实现
+查询属于某个班级的所有学生
+扩充需求：
+查询参加某个兴趣小组的所有学生
+查询某个学生参加的所有兴趣小组
+因年级不同，学生的成绩单包含的内容不同。小学阶段只有语数英，中学阶段还包括物理、化学、历史、地理
+生成每个学生的学习成绩报告单，邮件发送监护人。班主任可以自行定制邮件样式
+兴趣小组通过发送邮件到监护人邮箱的方式，发送通知到该小组的所有成员
+邮件发送功能打桩，无需实现
+说明：
+clean code及UT的认证，只需要实现基本需求
+advanced c++及evolutionary design的认证需要实现所有需求s

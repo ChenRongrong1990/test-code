@@ -1,0 +1,10 @@
+Message Dispatch of Thread Pool  
+Skip to end of metadata
+Created by Dongxu LI, last modified by Jing Q XU on Aug 01, 2017 Go to start of metadata
+Attention: construct data from console is not required, do not implement that logic. Never write code use fgets scanf, getchr, cin or other functions to get input from console.
+If you do need data for test, just set the value of variables.
+Requirement:
+The program creates two thread pools whose names are "key" and "other". Every thread pool includes 3 threads. the relation of thread pool name and thread id the thread id should be printed.
+The program can receive strings from stdin. The string which begins with "key" will be delivered to "key" thread pool. Others will be delivered to "other" thread pool.
+The thread proc function needs to  print thread id and the received strings.
+When customer types "exit", the programe will release all the resource and then exit.

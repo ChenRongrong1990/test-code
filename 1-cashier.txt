@@ -1,0 +1,38 @@
+Cashier  
+Skip to end of metadata
+Created by Jing Q XU, last modified on Aug 01, 2017 Go to start of metadata
+Attention: construct data from console is not required, do not implement that logic. Never write code use fgets scanf, getchr, cin or other functions to get input from console.
+If you do need data for test, just set the value of variables.
+Implement a supermarket cashier system, calculate the total price of customer's purchased goods
+VIPs have specific discounts. Gold VIP has 10% off discount. Silver VIP has 5% off discount. No any discount for bargain goods.
+Example goods price：
+Item serial number
+Item Name
+Price
+ Is Bargain
+000001	Coffee	48	 Yes
+000002	Cup	60	 No
+000003	Chocolate	48.8	 No
+000004	Tea	118	 No
+ 
+ 
+LikeBe the first to like this
+No labels Edit Labels
+1 Comment
+ User icon: jqxu
+Jing Q XU
+实现一个超市收银系统，计算客户购买的商品的总价格。
+对会员实行优惠，会员目前分为两个等级：金卡、银卡。会员享有折扣优惠。金卡9折，银卡95折，非会员无折扣。特价商品不参与折扣。
+示例商品单价：
+商品编号
+商品名称
+单价（单位元）
+ 特价商品
+000001	雀巢咖啡	48	 Yes
+000002	咖啡杯	60	 No
+000003	巧克力	48.8	 No
+000004	果粒茶	118	 No
+ 需求澄清：
+只需要计算单个客户的一次消费金额
+一次消费可能包含多个商品
+无需实现商品管理系统 
